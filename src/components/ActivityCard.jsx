@@ -1,9 +1,9 @@
 function ActivityCard({ item, background, bgColors, timeframe }) {
   return (
     <div
-      className={`relative ${bgColors} text-white rounded-lg 
+      className={`relative ${bgColors} text-white rounded-xl 
                   w-full sm:w-64 md:w-[200px] lg:w-[250px]
-                  h-38 sm:h-42 md:h-48 lg:h-50 overflow-hidden`}
+                  h-38 sm:h-42 md:h-48 lg:h-60 overflow-hidden`}
     >
       {/* Background Icon */}
       <img
@@ -14,18 +14,18 @@ function ActivityCard({ item, background, bgColors, timeframe }) {
 
       {/* Inner Card */}
       <div
-        className="absolute bottom-0 left-0 bg-[#1C204B] w-full p-4 rounded-lg 
-                      h-30 sm:h-36 md:h-40 lg:h-40"
+        className="absolute bottom-0 left-0 bg-[#1C204B] w-full p-4 rounded-xl
+                      h-30 sm:h-36 md:h-40 lg:h-50"
       >
         <div className="flex justify-between items-center py-1">
-          <h3 className="text-xl font-bold">{item.title}</h3>
-          <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis" />
+          <h3 className="text-[18px] text-[#fff]">{item.title}</h3>
+          <img src="./src/images/icon-ellipsis.svg" alt="icon-ellipsis" />
         </div>
         <div className="flex flex-row justify-between sm:flex-col">
-          <p className="text-3xl font-bold py-2">
+          <p className="text-3xl py-2 text-[56px] font-[400] text-[#fff]">
             {item.timeframes[timeframe].current}hrs
           </p>
-          <p className="text-lg text-gray-400">
+          <p className="text-[15px] text-[#BBC0FF] font-[300]">
             Last{' '}
             {timeframe === 'daily'
               ? 'day'
