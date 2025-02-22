@@ -4,12 +4,12 @@ import ActivityGrid from '../components/ActivityGrid';
 import data from '../data/data.json';
 
 const backgrounds = [
-  'src/images/icon-work.svg',
-  'src/images/icon-play.svg',
-  'src/images/icon-study.svg',
-  'src/images/icon-exercise.svg',
-  'src/images/icon-social.svg',
-  'src/images/icon-self-care.svg',
+  '/images/icon-work.svg',
+  '/images/icon-play.svg',
+  '/images/icon-study.svg',
+  '/images/icon-exercise.svg',
+  '/images/icon-social.svg',
+  '/images/icon-self-care.svg',
 ];
 
 const bgColors = [

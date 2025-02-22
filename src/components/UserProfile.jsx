@@ -5,7 +5,7 @@ function UserProfile({ selectedTimeframe, onSelectTimeframe }) {
     <div className="relative bg-[#5747EA] text-white rounded-xl  w-full sm:w-80 md:w-[250px] lg:w-[300px] overflow-hidden h-auto min-h-[10rem] md:min-h-[20rem]">
       <div className="flex flex-row justify-between sm:flex-col p-6">
         <img
-          src="./src/images/image-jeremy.png"
+          src="/images/image-jeremy.png"
           alt="user"
           className="w-20 h-20 rounded-full border-4 border-[#fff]"
         />

@@ -19,7 +19,7 @@ function ActivityCard({ item, background, bgColors, timeframe }) {
       >
         <div className="flex justify-between items-center py-1">
           <h3 className="text-[18px] text-[#fff]">{item.title}</h3>
-          <img src="./src/images/icon-ellipsis.svg" alt="icon-ellipsis" />
+          <img src="/images/icon-ellipsis.svg" alt="icon-ellipsis" />
         </div>
         <div className="flex flex-row justify-between sm:flex-col">
           <p className="text-3xl py-2 text-[56px] font-[400] text-[#fff]">
