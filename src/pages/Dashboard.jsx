@@ -1,5 +1,6 @@
-import ActivityCard from '../components/ActivityCard';
+import { useState } from 'react';
 import UserProfile from '../components/UserProfile';
+import ActivityGrid from '../components/ActivityGrid';
 import data from '../data/data.json';
 
 const backgrounds = [
@@ -11,25 +12,33 @@ const backgrounds = [
   'images/icon-self-care.svg',
 ];
 
-function Dashboard() {
-  return (
-    <>
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="grid grid-cols-4 gap-y-16 gap-x-4 p-4 w-[60%] h-[100%]">
-          <div className="row-span-2 bg-blue-500 py-20 rounded-lg flex items-center justify-center text-white">
-            <UserProfile />
-          </div>
+const bgColors = [
+  'bg-[#FF8B64]',
+  'bg-[#55C2E6]',
+  'bg-[#FF5E7D]',
+  'bg-[#4BCF82]',
+  'bg-[#7335D2]',
+  'bg-[#F1C75B]',
+];
 
-          {data.map((item) => (
-            <ActivityCard
-              key={item.title}
-              item={item}
-              background={backgrounds[data.indexOf(item)]}
-            />
-          ))}
-        </div>
+function Dashboard() {
+  const [timeframe, setTimeframe] = useState('weekly');
+
+  return (
+    <div className="min-h-screen bg-[#0d1323] flex items-center justify-center">
+      <div className="w-full max-w-[1200px] mx-auto p-6 flex flex-col sm:flex-row gap-6">
+        <UserProfile
+          selectedTimeframe={timeframe}
+          onSelectTimeframe={setTimeframe}
+        />
+        <ActivityGrid
+          data={data}
+          backgrounds={backgrounds}
+          bgColors={bgColors}
+          timeframe={timeframe}
+        />
       </div>
-    </>
+    </div>
   );
 }
 
